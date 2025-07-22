@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("podium-img").src = "assets/zorrusso.jpg";
 
   document.getElementById("prize-ride-content").textContent = "Place top 3 in Pursuit Races for 3 days in a row";
-  document.getElementById("prizeride-img").src = "assets/euros.jpg";
+  document.getElementById("prizeride-img").src = "assets/euros.png";
 
   document.getElementById("discount-list").innerHTML = `
     <li>-40% Pegassi Zorrusso <img src='assets/zorrusso.jpg' width='150'/></li>
