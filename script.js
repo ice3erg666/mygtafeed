@@ -1,32 +1,22 @@
 
-// Live GTA Online Tunables Script
-async function fetchTunables() {
-    const bonuses = document.getElementById("bonuses");
-    const podium = document.getElementById("podium");
-    const prizeRide = document.getElementById("prize-ride-content");
-    const discounts = document.getElementById("discount-list");
-    const gunVan = document.getElementById("gunvan-content");
-    const trials = document.getElementById("trials");
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("podium").textContent = "Pegassi Zorrusso";
+  document.getElementById("podium-img").src = "assets/zorrusso.jpg";
 
-    try {
-        // Placeholder: Rockstar's tunables URL (requires CORS bypass for front-end)
-        const proxy = "https://api.allorigins.win/get?url=";
-        const url = "https://prod.cloud.rockstargames.com/titles/gta5/pcros/0/tunables.json";
-        const response = await fetch(proxy + encodeURIComponent(url));
-        const data = JSON.parse(JSON.parse(await response.text()).contents);
+  document.getElementById("prize-ride-content").textContent = "Place top 3 in Pursuit Races for 3 days in a row";
+  document.getElementById("prizeride-img").src = "assets/euros.jpg";
 
-        // Simulated structure (normally you'd extract actual keys here)
-        podium.innerText = data.PODIUM_CAR || "Podium Car: Unknown";
-        prizeRide.innerText = data.PRIZE_RIDE || "Prize Ride: Unknown";
-        bonuses.innerText = data.DOUBLE_REWARDS || "Double GTA$: Unknown";
-        discounts.innerText = data.DISCOUNTS || "Discounts: Unknown";
-        gunVan.innerText = data.GUN_VAN || "Gun Van Stock: Unknown";
-        trials.innerText = data.TIME_TRIALS || "Time Trials: Unknown";
+  document.getElementById("discount-list").innerHTML = `
+    <li>-40% Pegassi Zorrusso <img src='assets/zorrusso.jpg' width='150'/></li>
+    <li>-30% Hydra Jet <img src='assets/hydra.jpg' width='150'/></li>
+  `;
 
-    } catch (error) {
-        bonuses.innerText = "Failed to load data.";
-        console.error("Error fetching tunables:", error);
-    }
-}
+  document.getElementById("gunvan-content").innerHTML = `
+    <li>Railgun - $400,000</li>
+    <li>Tactical SMG - $250,000</li>
+    <li>Knife - $500</li>
+  `;
 
-fetchTunables();
+  document.getElementById("trials").textContent = "HSW: Pacific Bluffs | RC: Vespucci Canals | Standard: Vinewood Bowl";
+  document.getElementById("bonuses").textContent = "Double GTA$ on Mr. Faber Work, Stockpile Adversary Mode";
+});
