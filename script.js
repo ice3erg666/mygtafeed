@@ -1,14 +1,14 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("podium").textContent = "Pegassi Zorrusso";
-  document.getElementById("podium-img").src = "assets/zorrusso.JPG";
+  document.getElementById("podium-img").src = "assets/zorrusso.png";
 
   document.getElementById("prize-ride-content").textContent = "Place top 3 in Pursuit Races for 3 days in a row";
   document.getElementById("prizeride-img").src = "assets/euros.png";
 
   document.getElementById("discount-list").innerHTML = `
-    <li>-40% Pegassi Zorrusso <img src='assets/zorrusso.JPG' width='150'/></li>
-    <li>-30% Hydra Jet <img src='assets/hydra.WEBP' width='150'/></li>
+    <li>-40% Pegassi Zorrusso <img src='assets/zorrusso.png' width='150'/></li>
+    <li>-30% Hydra Jet <img src='assets/hydra.png' width='150'/></li>
   `;
 
   document.getElementById("gunvan-content").innerHTML = `
